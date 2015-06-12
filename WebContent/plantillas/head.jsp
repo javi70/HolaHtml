@@ -4,7 +4,7 @@
 
 <head>
 
- <base href="/HolaMundo/">		
+  <base href="/HolaMundo/">		
 
   <meta charset="utf-8">
 
@@ -17,6 +17,15 @@
   
   <link rel="stylesheet" type="text/css" href="css/styles.css?v=1.0">
 
+
+   <!-- Font Awesome  -->		
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.css">
+  
+  <!-- Custom IconMoon  -->
+  <link rel="stylesheet" type="text/css" href="fonts/iconmoon/style.css">
+
+
+
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -26,3 +35,25 @@
 <body>
 
 <div id="container">
+
+<noscript> 
+  <h1>JAVASCRIPT no habilitado</h1>
+   <!-- anchor linking to external file -->
+  <a href="#">¿Como solucionarlo?</a>
+</noscript>
+
+
+<header id="head">	
+
+	<div class="clearfix">	
+		<div id="logo">
+		  	<a href="" title="Volver a la home">
+		  		<img src="img/dado.png" alt="dado de 6 caras icono de la App Web"/>
+		  	</a>
+		</div>		
+		<h1>Ejemplos de HTML5, CSS3 y JS</h1>		
+	</div>
+	
+	<!-- Navegacion menu principal  -->
+
+
