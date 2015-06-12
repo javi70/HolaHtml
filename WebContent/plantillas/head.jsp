@@ -4,7 +4,7 @@
 
 <head>
 
-  <base href="/HolaMundo/">		
+  <base href="/HolaHtml/">		
 
   <meta charset="utf-8">
 
@@ -39,7 +39,7 @@
 <noscript> 
   <h1>JAVASCRIPT no habilitado</h1>
    <!-- anchor linking to external file -->
-  <a href="#">¿Como solucionarlo?</a>
+  <a href="#">ï¿½Como solucionarlo?</a>
 </noscript>
 
 
