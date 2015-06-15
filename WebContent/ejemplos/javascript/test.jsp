@@ -21,7 +21,7 @@
   		var fecha= new Date(2015,5,15); // seria el 15 de junio de 2015
   		
   		assert.ok(convertirFecha(fecha,CORTO)== '15/06/2015', 'fecha corta');
-  		assert.ok(convertirFecha(fecha,LARGO)== 'el 15 de junio del 2015', 'fecha larga');		
+  		assert.ok(convertirFecha(fecha,LARGO)== 'el 15 de Junio del 2015', 'fecha larga');		
   		assert.ok(convertirFecha(fecha,'formato no valido')== null, 'fecha nula');
   		assert.ok(convertirFecha(null,CORTO)== null, 'fecha nula');
   		assert.ok(convertirFecha(undefined,CORTO)== null , 'fecha undefined');

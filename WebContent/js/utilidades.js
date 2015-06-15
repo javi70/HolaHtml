@@ -99,7 +99,7 @@ const CORTO = 'corto';
 const LARGO = 'largo';
 
 
-function convertirFecha(date, formato){
+function convertirFecha1(date, formato){
 var result=null;
 //TODO implementar conversion
 var meses=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
@@ -143,4 +143,42 @@ if (formato==CORTO){
 return result;
 
 }
+function convertirFecha(date, formato) {
 
+	var resul = null;
+	var meses = [ 'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+			'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre',
+			'Diciembre' ];
+	var dia = null;
+	var mes = null;
+
+	if (date instanceof Date && !isNaN(date.valueOf())) {
+
+		if (date.getDate() < 10) {
+			dia = '0' + date.getDate();
+		} else {
+			dia = date.getDate();
+		}
+
+		if ((date.getMonth() + 1) < 10) {
+			mes = '0' + (date.getMonth() + 1);
+		} else {
+			mes = (date.getMonth() + 1);
+		}
+
+		switch (formato) {
+		case CORTO:
+			resul = dia + '/' + mes + '/' + date.getFullYear();
+			break;
+		case LARGO:
+			resul = "el " + dia + " de " + meses[date.getMonth()] + " del "
+					+ date.getFullYear();
+			break;
+		default:
+			resul = null;
+		}
+	}
+
+	return resul;
+
+}
