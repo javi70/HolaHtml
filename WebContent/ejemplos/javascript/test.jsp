@@ -16,6 +16,28 @@
   <script>
   
   
+  	QUnit.test( "Date - fechas", function( assert ) {
+	 	
+  		var fecha= new Date(2015,5,15); // seria el 15 de junio de 2015
+  		
+  		assert.ok(convertirFecha(fecha,CORTO)== '15/06/2015', 'fecha corta');
+  		assert.ok(convertirFecha(fecha,LARGO)== 'el 15 de junio del 2015', 'fecha larga');		
+  		assert.ok(convertirFecha(fecha,'formato no valido')== null, 'fecha nula');
+  		assert.ok(convertirFecha(null,CORTO)== null, 'fecha nula');
+  		assert.ok(convertirFecha(undefined,CORTO)== null , 'fecha undefined');
+  		assert.ok(convertirFecha('45/FF/2020',CORTO)== null, 'fecha no correcta');
+
+  	});
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   QUnit.test( "Arrays / Vectores", function( assert ) {
   	var jonWayne = new Array("Jon", "Wayne", 45);
   	assert.ok ( jonWayne[0] == 'Jon', 'Posición 0 está "Jon"' );

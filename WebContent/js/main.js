@@ -10,6 +10,11 @@ $(function() {
 	
 	 $('#select').filterByText($('#textbox'), false);
 
+//	 $.datepicker.setDefaults( $.datepicker.regional[ "es" ] );
+	 
+	 //asociar  el datePicker de Jquery UI a todos los elementos INPUT con atributo DATA-WIDGET que valga CALENDARIO
+	 $("input[data-widget='calendario']").datepicker().Option($.datepicker.regional[ "es" ]);
+	 console.debug('datePicker habilitado');
     
     
   });

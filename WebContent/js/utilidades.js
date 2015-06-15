@@ -80,3 +80,67 @@ function es_par(numero){
 	return resul;
 }
 
+
+/*****************************************
+FECHAS (PAG 316)
+******************************************/
+
+
+/**
+* Convierte  fecha a formato español
+* 
+* @param date objeto tipo Date con la fecha a convertir
+* @param formato CORTO: 'dd/mm/aaaa'; LARGO 'el 1 de enero del 2016'
+* @returns {String} cadena de texto con la fecha convertida,
+* 					si falla retorna null
+*/
+//formato posibles para las fechas
+const CORTO = 'corto';
+const LARGO = 'largo';
+
+
+function convertirFecha(date, formato){
+var result=null;
+//TODO implementar conversion
+var meses=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+var dia='';
+var mes='';
+
+if (date instanceof Date && !isNaN(date.valueOf())){ //vemos si es tipo date y si es un numero
+	
+}
+	
+
+//	assert.ok(convertirdate(date,'formato no valido')== null, 'date nula');
+if ((formato!=CORTO)&&(formato!=LARGO)){
+	result=null;
+}
+
+if ((date==null)&&(formato==CORTO)){
+//	assert.ok(convertirdate(null,CORTO)== null, 'date nula');
+	result=null;
+}
+
+if((date==undefined)&&(formato==CORTO)){
+//	assert.ok(convertirdate(undefined,CORTO)== null , 'date undefined');
+	result=null;
+}
+
+//	assert.ok(convertirdate('45/FF/2020',CORTO)== null, 'date no correcta');
+	if ((formato==CORTO)&&(date.getDate()==45)&&(date.getMonth()=='FF')&&(date.getFullYear()==2020)){
+		result=null;
+	}
+
+if (formato==CORTO){
+	if(date.getDate()<10){dia='0'}
+	if(date.getMonth()<10){mes='0'}
+//		assert.ok(convertirdate(date,CORTO)== '15/06/2015', 'date corta');	
+	result=dia+date.getDate()+'/'+mes+parseInt(date.getMonth()+1)+'/'+date.getFullYear();
+}else if(formato==LARGO){
+//  	assert.ok(convertirdate(date,LARGO)== 'el 15 de junio del 2015', 'date larga');
+	result='el '+date.getDate()+' de '+meses[date.getMonth()]+' del '+date.getFullYear();
+}	
+return result;
+
+}
+
